@@ -16,9 +16,11 @@ export default function DashboardLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="min-h-screen grid grid-cols-12">
-      <Nav />
-      <main className="col-span-11 p-4">{children}</main>
-    </div>
+<div className="min-h-screen">
+  <Nav />
+  <main className="md:ml-[220px] md:p-5 p-1">
+    {children}
+  </main>
+</div>
   );
 }

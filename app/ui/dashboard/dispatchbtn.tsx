@@ -51,9 +51,10 @@ export default function DispatchBtn({ drivers }: Props) {
 
             {/* DRIVER */}
             <div>
-              <label className="text-sm font-medium">Driver</label>
+              <label htmlFor="driver_id" className="text-sm font-medium">Driver</label>
               <select
                 name="driver_id"
+                id="driver_id"
                 className="w-full mt-1 border rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-purple-500"
               >
                 <option value="">Select a driver</option>
@@ -68,9 +69,10 @@ export default function DispatchBtn({ drivers }: Props) {
 
             {/* PICKUP */}
             <div>
-              <label className="text-sm font-medium">Pick-up Location</label>
+              <label htmlFor="pickup_location" className="text-sm font-medium">Pick-up Location</label>
               <input
                 type="text"
+                id="pickup_location"
                 name="pickup_location"
                 placeholder="Enter pickup location"
                 className="w-full mt-1 border rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-purple-500"
@@ -79,9 +81,10 @@ export default function DispatchBtn({ drivers }: Props) {
 
             {/* DESTINATION */}
             <div>
-              <label className="text-sm font-medium">Destination</label>
+              <label htmlFor="destination" className="text-sm font-medium">Destination</label>
               <input
                 type="text"
+                id="destination"
                 name="destination"
                 placeholder="Enter destination"
                 className="w-full mt-1 border rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-purple-500"
