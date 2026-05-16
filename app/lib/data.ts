@@ -2,6 +2,12 @@ import postgres from 'postgres';
  
 const sql = postgres(process.env.POSTGRES_URL!, { ssl: 'require' });
 
+export type Driver = {
+  id: number;
+  first_name: string;
+  last_name: string;
+};
+
 const queries = {
   dispatches: async () => {
     try {
@@ -33,7 +39,7 @@ const queries = {
     }
   },
 
-  
+
     inTransitDispatches: async () => {
     return await sql`
       SELECT 
@@ -47,6 +53,18 @@ const queries = {
       ORDER BY d.created_at DESC
     `;
   },
+
+
+    
+
+ drivers: async (): Promise<Driver[]> => {
+    const drivers = await sql<Driver[]>`
+      SELECT id, first_name, last_name
+      FROM public.drivers
+      ORDER BY first_name ASC
+    `;
+    return drivers;
+    }
 };
 
 export default queries;
