@@ -100,6 +100,7 @@ export default function DispatchBtn({ drivers }: Props) {
 
               <button
                 type="submit"
+                onClick={closeModal}
                 className="px-4 py-2 rounded-lg bg-purple-700 text-white hover:bg-purple-800"
               >
                 Add Dispatch
